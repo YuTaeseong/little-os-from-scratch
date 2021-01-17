@@ -25,8 +25,7 @@ loader:                         ; the loader label (defined as entry point in li
                                                 ; stack (end of memory area)
 
     ; The assembly code
-    extern fb_move_cursor   ; the function sum_of_three is defined elsewhere
-    push dword 5            ; arg1
-    call fb_move_cursor       ; call the function, the result will be in eax
+    extern main   ; the function sum_of_three is defined elsewhere
+    call main      ; call the function, the result will be in eax
 .loop:
     jmp .loop                   ; loop forever
